@@ -7,7 +7,7 @@
 
 	<style>
 		body {
-			background-color: cyan;
+			background-color: lightgrey;
 		}
 	</style>
 </head>
@@ -30,7 +30,12 @@
 
 	<script>
 		function chooseSpot() {
-			
+			let spots = document.getElementsByName('touristSpot');
+
+			for (let i = 0; i < spots.length; i++) {
+				if (spots[i].checked) 
+					document.getElementById('place').innerHTML = spots[i].value;
+			}
 		}
 
 	</script>
